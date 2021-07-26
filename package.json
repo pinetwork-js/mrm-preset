@@ -1,0 +1,27 @@
+{
+  "name": "@pinetwork-js/mrm-preset",
+  "version": "0.0.0",
+  "description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiNetwork-js/mrm-preset.git"
+  },
+  "author": "Brewal Derouet <brewal_derouet@hotmail.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PiNetwork-js/mrm-preset/issues"
+  },
+  "homepage": "https://github.com/PiNetwork-js/mrm-preset#readme",
+  "keywords": [
+    "pi",
+    "Pi Network",
+    "minepi",
+    "pinetwork-js",
+    "mrm-preset",
+    "mrm"
+  ]
+}
