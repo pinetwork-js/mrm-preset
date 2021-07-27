@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"strict": true,
+		"outDir": "build",
+		"resolveJsonModule": true,
+		"target": "ES2019",
+		"lib": ["ES2019"]
+	},
+	"include": ["src/*/*.ts", "src/config.json"]
+}

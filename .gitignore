@@ -35,3 +35,7 @@ pids
 
 # Output of 'npm pack'
 *.tgz
+
+# TypeScript
+*.tsbuildinfo
+build
