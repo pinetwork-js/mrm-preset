@@ -1,30 +1,30 @@
 {
-  "name": "@pinetwork-js/mrm-preset",
-  "version": "0.0.0",
-  "description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
-  "main": "index.js",
-  "scripts": {
-    "prepublish": "yarn build",
-    "build": "rimraf build && tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PiNetwork-js/mrm-preset.git"
-  },
-  "author": "Brewal Derouet <brewal_derouet@hotmail.fr>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PiNetwork-js/mrm-preset/issues"
-  },
-  "homepage": "https://github.com/PiNetwork-js/mrm-preset#readme",
-  "keywords": [
-    "pinetwork-js",
-    "mrm-preset",
-    "mrm"
-  ],
-  "packageManager": "yarn@3.0.0",
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "typescript": "^4.3.5"
-  }
+	"name": "@pinetwork-js/mrm-preset",
+	"version": "0.0.0",
+	"description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
+	"main": "index.js",
+	"scripts": {
+		"prepublish": "yarn build",
+		"build": "rimraf build && tsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PiNetwork-js/mrm-preset.git"
+	},
+	"author": "Brewal Derouet <brewal_derouet@hotmail.fr>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/PiNetwork-js/mrm-preset/issues"
+	},
+	"homepage": "https://github.com/PiNetwork-js/mrm-preset#readme",
+	"keywords": [
+		"pinetwork-js",
+		"mrm-preset",
+		"mrm"
+	],
+	"packageManager": "yarn@3.0.0",
+	"devDependencies": {
+		"rimraf": "^3.0.2",
+		"typescript": "^4.3.5"
+	}
 }
