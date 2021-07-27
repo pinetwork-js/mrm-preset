@@ -6,8 +6,8 @@
 		"strict": true,
 		"outDir": "build",
 		"resolveJsonModule": true,
-		"target": "ES2019",
-		"lib": ["ES2019"]
+		"target": "ESNEXT",
+		"lib": ["ESNEXT"]
 	},
-	"include": ["src/*/*.ts", "src/config.json"]
+	"include": ["src"]
 }
