@@ -3,9 +3,11 @@
 	"version": "0.0.0",
 	"description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
 	"main": "index.js",
+	"prettier": "@pinetwork-js/prettier-config",
 	"scripts": {
 		"prepublish": "yarn build",
-		"build": "rimraf build && tsc"
+		"build": "rimraf build && tsc",
+		"format": "prettier . --write"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +26,8 @@
 	],
 	"packageManager": "yarn@3.0.0",
 	"devDependencies": {
+		"@pinetwork-js/prettier-config": "^0.1.0",
+		"prettier": "^2.3.2",
 		"rimraf": "^3.0.2",
 		"typescript": "^4.3.5"
 	}

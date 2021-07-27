@@ -9,10 +9,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pinetwork-js/mrm-preset@workspace:."
   dependencies:
+    "@pinetwork-js/prettier-config": ^0.1.0
+    prettier: ^2.3.2
     rimraf: ^3.0.2
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
+
+"@pinetwork-js/prettier-config@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@pinetwork-js/prettier-config@npm:0.1.0"
+  peerDependencies:
+    prettier: ^2.3.2
+  peerDependenciesMeta:
+    prettier:
+      optional: false
+  checksum: e49bb55e70f29613fd8d14532be66f403c28ff1505fe9ac79296d6b504b26fafead5055fc89402ee35608dacda58881a8e97aa9f581b3cdfa36e80aed9513d97
+  languageName: node
+  linkType: hard
 
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
@@ -98,6 +112,15 @@ __metadata:
   version: 1.0.1
   resolution: "path-is-absolute@npm:1.0.1"
   checksum: 060840f92cf8effa293bcc1bea81281bd7d363731d214cbe5c227df207c34cd727430f70c6037b5159c8a870b9157cba65e775446b0ab06fd5ecc7e54615a3b8
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "prettier@npm:2.3.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
   languageName: node
   linkType: hard
 
