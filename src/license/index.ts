@@ -4,7 +4,7 @@ import { inquirerRequired } from '../utils';
 module.exports = function task({ name }: { name: string }) {
 	file('LICENSE').save(`MIT License
 
-Copyright (c) ${new Date().getFullYear()} ${name}, contributors
+Copyright (c) ${new Date().getFullYear()} ${name}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
