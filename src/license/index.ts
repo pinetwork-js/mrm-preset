@@ -29,7 +29,7 @@ module.exports.parameters = {
 	name: {
 		type: 'input',
 		message: 'License owner/organization name',
-		default: 'Typescord',
+		default: 'Pinetwork-js',
 		validate: inquirerRequired,
 	},
 };

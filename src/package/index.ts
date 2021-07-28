@@ -90,7 +90,7 @@ module.exports.parameters = {
 	author: {
 		type: 'input',
 		message: 'Package author',
-		default: 'Typescord',
+		default: 'Pinetwork-js',
 		validate: inquirerRequired,
 	},
 	main: {
@@ -119,7 +119,7 @@ module.exports.parameters = {
 	},
 	githubUrl: {
 		type: 'input',
-		message: 'Package GitHub repository (e.g. https://github.com/typescord/core)',
+		message: 'Package GitHub repository (e.g. https://github.com/PiNetwork-js/sdk)',
 		validate(input: string): true | string {
 			let url: URL | undefined;
 
@@ -134,7 +134,7 @@ module.exports.parameters = {
 	keywords: {
 		type: 'input',
 		message: 'Package keywords (comma-separated)',
-		default: 'typescord',
+		default: 'pinetwork-js',
 		validate: inquirerRequired,
 	},
 };
