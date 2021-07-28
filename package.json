@@ -1,58 +1,58 @@
 {
-	"name": "@pinetwork-js/mrm-preset",
-	"version": "0.0.0",
-	"description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
-	"main": "build/config.json",
-	"prettier": "@pinetwork-js/prettier-config",
-	"scripts": {
-		"prepublish": "yarn build",
-		"build": "rimraf build && tsc",
-		"lint": "eslint . --ext ts",
-		"lint-fix": "yarn lint --fix",
-		"format": "prettier . --write",
-		"mrm": "mrm --dir ./build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/PiNetwork-js/mrm-preset.git"
-	},
-	"author": "Brewal Derouet <brewal_derouet@hotmail.fr>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/PiNetwork-js/mrm-preset/issues"
-	},
-	"homepage": "https://github.com/PiNetwork-js/mrm-preset#readme",
-	"keywords": [
-		"pinetwork-js",
-		"mrm-preset",
-		"mrm"
-	],
-	"packageManager": "yarn@3.0.0",
-	"devDependencies": {
-		"@pinetwork-js/eslint-config": "^0.1.1",
-		"@pinetwork-js/prettier-config": "^0.1.0",
-		"@types/node": "^16.4.3",
-		"@types/semver": "^7.3.8",
-		"@typescript-eslint/eslint-plugin": "^4.28.5",
-		"@typescript-eslint/parser": "^4.28.5",
-		"eslint": "^7.31.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-import-resolver-node": "^0.3.4",
-		"eslint-plugin-import": "^2.23.4",
-		"eslint-plugin-prettier": "^3.4.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint-plugin-sonarjs": "^0.9.1",
-		"eslint-plugin-unicorn": "^34.0.1",
-		"mrm": "^3.0.5",
-		"prettier": "^2.3.2",
-		"rimraf": "^3.0.2",
-		"typescript": "^4.3.5"
-	},
-	"dependencies": {
-		"mrm-core": "^6.1.2",
-		"semver": "^7.3.5"
-	},
-	"files": [
-		"build"
-	]
+  "name": "@pinetwork-js/mrm-preset",
+  "version": "0.1.0",
+  "description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
+  "main": "build/config.json",
+  "prettier": "@pinetwork-js/prettier-config",
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "rimraf build && tsc",
+    "lint": "eslint . --ext ts",
+    "lint-fix": "yarn lint --fix",
+    "format": "prettier . --write",
+    "mrm": "mrm --dir ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiNetwork-js/mrm-preset.git"
+  },
+  "author": "Brewal Derouet <brewal_derouet@hotmail.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PiNetwork-js/mrm-preset/issues"
+  },
+  "homepage": "https://github.com/PiNetwork-js/mrm-preset#readme",
+  "keywords": [
+    "pinetwork-js",
+    "mrm-preset",
+    "mrm"
+  ],
+  "packageManager": "yarn@3.0.0",
+  "devDependencies": {
+    "@pinetwork-js/eslint-config": "^0.1.1",
+    "@pinetwork-js/prettier-config": "^0.1.0",
+    "@types/node": "^16.4.3",
+    "@types/semver": "^7.3.8",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "eslint-plugin-unicorn": "^34.0.1",
+    "mrm": "^3.0.5",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "mrm-core": "^6.1.2",
+    "semver": "^7.3.5"
+  },
+  "files": [
+    "build"
+  ]
 }
