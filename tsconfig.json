@@ -1,13 +1,8 @@
 {
+	"extends": "./src/typescript/_tsconfig.json",
 	"compilerOptions": {
-		"module": "CommonJS",
-		"moduleResolution": "node",
-		"esModuleInterop": true,
-		"strict": true,
-		"outDir": "build",
 		"resolveJsonModule": true,
-		"target": "ESNEXT",
-		"lib": ["ESNEXT"]
+		"outDir": "build"
 	},
-	"include": ["src"]
+	"include": ["src/*/*.ts", "src/config.json"]
 }
