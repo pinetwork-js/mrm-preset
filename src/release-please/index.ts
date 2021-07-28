@@ -23,7 +23,7 @@ module.exports = function task() {
 			},
 			jobs: {
 				'release-please': {
-					'runs-on': 'ubuntu-20.04',
+					'runs-on': 'ubuntu-latest',
 					steps: [
 						{
 							uses: 'GoogleCloudPlatform/release-please-action@v2',
