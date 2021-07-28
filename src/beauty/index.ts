@@ -38,7 +38,7 @@ module.exports = function task() {
 	yaml('.eslintrc.yml')
 		.merge({
 			root: true,
-			extends: ['@pinetwork-js', 'plugin'],
+			extends: ['@pinetwork-js', 'prettier'],
 			plugins: ['prettier'],
 			parserOptions: tsConfigExists ? { project: 'tsconfig.json' } : undefined,
 			rules: { 'prettier/prettier': 'error' },
