@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.1.2](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.1.1...v0.1.2) (2021-07-28)
+
+
+### Bug Fixes
+
+* beauty eslint extends prettier ([7bba86f](https://www.github.com/PiNetwork-js/mrm-preset/commit/7bba86ff516fbb8ed5cf46a81fce39f84d87df0a))
+
 ### [0.1.1](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.1.0...v0.1.1) (2021-07-28)
 
 
