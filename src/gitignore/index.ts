@@ -39,7 +39,7 @@ const defaults = [
 ];
 
 const yarn = [
-	'# Yarn 2',
+	'# Yarn Berry',
 	'.yarn/*',
 	'!.yarn/patches',
 	'!.yarn/releases',

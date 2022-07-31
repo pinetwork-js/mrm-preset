@@ -3,13 +3,13 @@ import { minVersion, satisfies } from 'semver';
 
 import { format, isUsingYarn } from '../utils';
 
-const NODE_MAJOR_VERSIONS = [...Array(15).keys()].reverse();
+const NODE_MAJOR_VERSIONS = Array.from({ length: 18 }, (_, index) => (index + 1).toString()).reverse();
 
 module.exports = function task() {
 	const pkg = packageJson();
-	const version = pkg.get('engines.node', '>=15.0.0');
+	const version = pkg.get('engines.node', '>=16.0.0');
 	const maxMajorVersion =
-		NODE_MAJOR_VERSIONS.find((nodeVersion) => satisfies(`${nodeVersion}.0.0`, version))?.toString() ||
+		NODE_MAJOR_VERSIONS.find((nodeVersion) => satisfies(`${nodeVersion}.0.0`, version)) ??
 		minVersion(version)?.raw;
 	const usingYarn = isUsingYarn();
 

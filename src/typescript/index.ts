@@ -8,6 +8,7 @@ module.exports = function task() {
 	const pkg = packageJson()
 		.setScript('prepublishOnly', `${isUsingYarn() ? 'yarn' : 'npm run'} build`)
 		.setScript('build', 'rimraf build && tsc')
+		.setScript('types:check', 'tsc --noEmit')
 		.set('types', 'build/index.d.ts')
 		.merge({ files: ['build'] });
 
@@ -24,8 +25,10 @@ module.exports = function task() {
 	install(dependencies);
 	format(['tsconfig.json', '.eslintrc.yml', 'package.json']);
 
+	const vscodeConfigExists = json('.vscode/settings.json').exists();
+
 	if (isUsingYarnBerry()) {
-		execCommand('yarn', ['dlx', '@yarnpkg/sdks@2.4.1-rc.4', 'base']);
+		execCommand('yarn', ['dlx', '@yarnpkg/sdks', vscodeConfigExists ? 'vscode' : 'base']);
 	}
 };
 

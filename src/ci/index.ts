@@ -2,7 +2,7 @@ import { packageJson, yaml } from 'mrm-core';
 import { minVersion, satisfies } from 'semver';
 import { cleanObjectOrArray, format, isUsingYarn } from '../utils';
 
-const NODE_MAJOR_VERSIONS = Array.from({ length: 16 }, (_, index) => (index + 1).toString());
+const NODE_MAJOR_VERSIONS = Array.from({ length: 18 }, (_, index) => (index + 1).toString());
 
 module.exports = function task() {
 	const pkg = packageJson();
@@ -13,7 +13,7 @@ module.exports = function task() {
 		return;
 	}
 
-	const version = pkg.get('engines.node', '>=15.0.0');
+	const version = pkg.get('engines.node', '>=16.0.0');
 	const versions = NODE_MAJOR_VERSIONS.filter((nodeVersion) => satisfies(`${nodeVersion}.0.0`, version));
 	let singleVersion = versions.length === 0 ? minVersion(version)?.version : undefined;
 

@@ -59,14 +59,17 @@ export function execCommand(command: string, args: string[] = []): void {
 
 export function orderProperties<T extends Record<string, unknown>>(object: T, order: string[]): T {
 	const ordered: Partial<T> = {};
+
 	for (const key of Object.keys(object).sort((a, b) => order.indexOf(a) - order.indexOf(b)) as (keyof T)[]) {
 		ordered[key] = object[key];
 	}
+
 	return ordered as T;
 }
 
 export function format(files: string[]): void {
 	const pkg = packageJson();
+
 	if (!pkg.exists() || !(pkg.get('prettier') && files.includes('package.json'))) {
 		return;
 	}
@@ -105,6 +108,7 @@ export function isUsingYarnBerry(): boolean {
 
 export function install(dependencies: string[]): void {
 	const usingYarn = isUsingYarn() || isUsingYarnBerry();
+
 	execCommand(usingYarn ? 'yarn' : 'npm', ['add', usingYarn ? '-D' : '--save-dev', ...dependencies]);
 }
 

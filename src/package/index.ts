@@ -112,7 +112,7 @@ module.exports.parameters = {
 	nodeVersion: {
 		type: 'input',
 		message: "Package Node.js's engine version",
-		default: '>=15.0.0 <17',
+		default: '>=16.0.0',
 		validate(input: string): true | string {
 			return validRange(input) ? true : 'The input is not a valid SemVer range.';
 		},
