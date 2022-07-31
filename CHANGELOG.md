@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.1.2...v0.2.0) (2022-07-31)
+
+
+### Features
+
+* new Mrm config ([11b9ac0](https://www.github.com/PiNetwork-js/mrm-preset/commit/11b9ac02eea12bff57628f21cd1a0634dbe70fb4))
+
+
+### Bug Fixes
+
+* ESLint errors and apply Mrm config ([6d88b77](https://www.github.com/PiNetwork-js/mrm-preset/commit/6d88b776a73d1a946308c39d75275189b59fc3ff))
+
 ### [0.1.2](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.1.1...v0.1.2) (2021-07-28)
 
 ### Bug Fixes
