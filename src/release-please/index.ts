@@ -1,3 +1,5 @@
+/* eslint-disable no-template-curly-in-string */
+
 import { packageJson, yaml } from 'mrm-core';
 import { minVersion, satisfies } from 'semver';
 
@@ -9,8 +11,7 @@ module.exports = function task() {
 	const pkg = packageJson();
 	const version = pkg.get('engines.node', '>=16.0.0');
 	const maxMajorVersion =
-		NODE_MAJOR_VERSIONS.find((nodeVersion) => satisfies(`${nodeVersion}.0.0`, version)) ??
-		minVersion(version)?.raw;
+		NODE_MAJOR_VERSIONS.find((nodeVersion) => satisfies(`${nodeVersion}.0.0`, version)) ?? minVersion(version)?.raw;
 	const usingYarn = isUsingYarn();
 
 	yaml('.github/workflows/release-please.yml')

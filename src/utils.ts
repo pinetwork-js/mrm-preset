@@ -1,8 +1,9 @@
 import { spawnSync } from 'child_process';
-import { Stats, statSync } from 'fs';
+import type { Stats } from 'fs';
+import { statSync } from 'fs';
 import { packageJson } from 'mrm-core';
 
-type ArrayOrObject = unknown[] | Record<PropertyKey, unknown>;
+type ArrayOrObject = Record<PropertyKey, unknown> | unknown[];
 
 const PackagePropertiesOrder = [
 	'name',

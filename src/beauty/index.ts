@@ -1,12 +1,17 @@
 import { json, lines, packageJson, yaml } from 'mrm-core';
-import { execCommand, format, install, isUsingYarn, isUsingYarnBerry } from '../utils';
+import { execCommand, format, install, isUsingYarnBerry } from '../utils';
 
 const dependencies = [
 	'@pinetwork-js/eslint-config',
 	'@pinetwork-js/prettier-config',
+	'@typescript-eslint/eslint-plugin',
+	'@typescript-eslint/parser',
 	'eslint',
 	'eslint-config-prettier',
+	'eslint-plugin-import',
 	'eslint-plugin-prettier',
+	'eslint-plugin-sonarjs',
+	'eslint-plugin-unicorn',
 	'prettier',
 ];
 
@@ -41,10 +46,10 @@ module.exports = function task() {
 
 	packageJson()
 		.set('prettier', '@pinetwork-js/prettier-config')
-		.setScript('lint', `eslint . --ext ${tsConfigExists ? 'ts,js' : 'js'}`)
-		.setScript('lint-fix', `eslint . --ext ${tsConfigExists ? 'ts,js' : 'js'} --fix`)
-		.setScript('format', `prettier . --write`)
-		.setScript('format:check', `prettier . --check`)
+		.setScript('lint', `eslint 'src/**/**.{js${tsConfigExists ? ',ts' : ''}}'`)
+		.setScript('lint:fix', `eslint 'src/**/**.{js${tsConfigExists ? ',ts' : ''}}' --fix`)
+		.setScript('format', `prettier 'src/**/**.{js${tsConfigExists ? ',ts' : ''}}' --write`)
+		.setScript('format:check', `prettier 'src/**/**.{js${tsConfigExists ? ',ts' : ''}}' --check`)
 		.save();
 
 	install(dependencies);

@@ -1,11 +1,15 @@
 root: true
-extends: ['@pinetwork-js', 'prettier']
-plugins: ['prettier']
+extends:
+  - '@pinetwork-js'
+  - prettier
+plugins:
+  - prettier
 parserOptions:
   project: tsconfig.json
 rules:
   prettier/prettier: error
   unicorn/new-for-builtins: off
+  import/no-import-module-exports: off
 env:
   node: true
-  es2020: true
+  es2022: true

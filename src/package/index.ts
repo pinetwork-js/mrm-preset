@@ -27,7 +27,7 @@ module.exports = function task({
 }: PackageInfos) {
 	const pkg = packageJson();
 	const oldName = pkg.get('name');
-	githubUrl = githubUrl.endsWith('/') ? githubUrl.slice(0, -1) : githubUrl;
+	const githubUrlFormatted = githubUrl.endsWith('/') ? githubUrl.slice(0, -1) : githubUrl;
 
 	pkg
 		.merge({
@@ -40,13 +40,13 @@ module.exports = function task({
 			},
 			author,
 			license: fsStat('LICENSE')?.isFile() ? 'MIT' : undefined,
-			homepage: `${githubUrl}#readme`,
+			homepage: `${githubUrlFormatted}#readme`,
 			bugs: {
-				url: `${githubUrl}/issues`,
+				url: `${githubUrlFormatted}/issues`,
 			},
 			repository: {
 				type: 'git',
-				url: `git+${githubUrl}.git`,
+				url: `git+${githubUrlFormatted}.git`,
 			},
 			keywords: keywords.split(/\s*,\s*/),
 		})
@@ -75,11 +75,10 @@ module.exports.parameters = {
 	name: {
 		type: 'input',
 		message: 'Package name',
-		validate(input: string): true | string {
-			const isValid = /^(?:@[\d*a-z~-][\d*._a-z~-]*\/)?[\da-z~-][\d._a-z~-]*$/.test(input);
-			return (
-				isValid || 'The input does not match the pattern of ^(?:@[a-z0-9-*~][a-z0-9-*._~]*/)?[a-z0-9-~][a-z0-9-._~]*$.'
-			);
+		validate(input: string): string | true {
+			const isValid = /^((?:@[\d*a-z~-][\d*._a-z~-]*\/)|)[\da-z~-][\d._a-z~-]*$/.test(input);
+
+			return isValid || 'The input does not match the pattern of ^((?:@[d*a-z~-][d*._a-z~-]*/)|)[da-z~-][d._a-z~-]*$.';
 		},
 	},
 	description: {
@@ -105,7 +104,7 @@ module.exports.parameters = {
 		type: 'input',
 		message: 'Package version',
 		default: '0.1.0',
-		validate(input: string): true | string {
+		validate(input: string): string | true {
 			return valid(input) ? true : 'The input is not a valid SemVer version.';
 		},
 	},
@@ -113,14 +112,14 @@ module.exports.parameters = {
 		type: 'input',
 		message: "Package Node.js's engine version",
 		default: '>=16.0.0',
-		validate(input: string): true | string {
+		validate(input: string): string | true {
 			return validRange(input) ? true : 'The input is not a valid SemVer range.';
 		},
 	},
 	githubUrl: {
 		type: 'input',
 		message: 'Package GitHub repository (e.g. https://github.com/PiNetwork-js/sdk)',
-		validate(input: string): true | string {
+		validate(input: string): string | true {
 			let url: URL | undefined;
 
 			try {

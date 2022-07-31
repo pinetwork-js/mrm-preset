@@ -1,7 +1,8 @@
 import { ini } from 'mrm-core';
 
-const defaults: Record<string, Record<string, string | boolean | number>> = {
+const defaults: Record<string, Record<string, boolean | number | string>> = {
 	'*': {
+		/* eslint-disable-next-line unicorn/text-encoding-identifier-case */
 		charset: 'utf-8',
 		end_of_line: 'lf',
 		insert_final_newline: true,
@@ -23,7 +24,7 @@ const defaults: Record<string, Record<string, string | boolean | number>> = {
 module.exports = function task() {
 	const editorconfig = ini('.editorconfig').set('_global', { root: true });
 
-	for (const key in defaults) {
+	for (const key of Object.keys(defaults)) {
 		editorconfig.set(key, defaults[key]);
 	}
 

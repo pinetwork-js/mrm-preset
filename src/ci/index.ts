@@ -1,3 +1,5 @@
+/* eslint-disable no-template-curly-in-string */
+
 import { packageJson, yaml } from 'mrm-core';
 import { minVersion, satisfies } from 'semver';
 import { cleanObjectOrArray, format, isUsingYarn } from '../utils';
@@ -18,6 +20,7 @@ module.exports = function task() {
 	let singleVersion = versions.length === 0 ? minVersion(version)?.version : undefined;
 
 	if (!singleVersion && versions.length === 1) {
+		/* eslint-disable-next-line prefer-destructuring */
 		singleVersion = versions[0];
 	}
 
