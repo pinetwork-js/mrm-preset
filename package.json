@@ -1,7 +1,7 @@
 {
 	"name": "@pinetwork-js/mrm-preset",
 	"description": "Pinetwork-js preset for mrm to easily init projects and keep configuration files in-sync.",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"main": "build/config.json",
 	"prettier": "@pinetwork-js/prettier-config",
 	"scripts": {
