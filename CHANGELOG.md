@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.2.0...v0.2.1) (2022-08-01)
+
+
+### Bug Fixes
+
+* add config.json to build ([64c10f5](https://www.github.com/PiNetwork-js/mrm-preset/commit/64c10f53f71f930311d9db79fb840efb97e788ba))
+
 ## [0.2.0](https://www.github.com/PiNetwork-js/mrm-preset/compare/v0.1.2...v0.2.0) (2022-07-31)
 
 
